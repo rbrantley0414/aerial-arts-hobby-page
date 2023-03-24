@@ -1,0 +1,326 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Forum', Georgia, 'Times New Roman', Times, serif;
+}
+
+.hero {
+    min-height: 90vh;
+    background-color: #f1b0cf;
+    color: white;
+    display: inline-block
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 24px 32px;
+    box-sizing: border-box;
+}
+
+.navbar .links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 16px;
+    font-size: 1.2rem;
+}
+
+.navbar p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.navbar .hamburger{
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+
+.navbar .bar{
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 15px;
+}
+
+.hero-content {
+    padding: 0 15%;
+}
+
+.tagline {
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 2px;
+    padding: 32px 0;
+}
+
+.two-column-section {
+    font-size: 2rem;
+}
+
+.two-column-section>div {
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+
+.about-section {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.about-content {
+    padding: 0 15%;
+}
+
+.about-heading {
+    font-size: 2.5rem;
+}
+
+.about-text {
+    font-size: 2rem;
+}
+
+.history-section {
+    background-color: #bde0fe;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.history-content {
+    padding: 0 15%;
+}
+
+.history-heading {
+    font-size: 2.5rem;
+}
+
+.history-text {
+    font-size: 1.5rem;
+}
+
+.arts-section {
+    background-color: #fae9f1;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.arts-content {
+    padding: 0 15%;
+}
+
+.arts-heading {
+    font-size: 2.5rem;
+}
+
+.arts-section ul {
+    list-style-type: none;
+}
+
+.arts-section ul li a {
+    font-size: 2rem;
+}
+
+.arts-section a {
+    text-decoration: none;
+    color: black;
+}
+
+.arts-section a:hover {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.arts-section a:active {
+    color: #d197b3;
+    border-bottom: 2px solid #d197b3;
+}
+
+.about-section img,
+.history-section img,
+.arts-section img {
+    height: 500px;
+    width: 500px;
+}
+
+h3 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-areas:
+        "aerial1 scorpion acro"
+        "duo2 aerial2 cross"
+        "triangle front aerial3";
+    grid-gap: 16px;
+    width: 80%;
+    margin: auto;
+}
+
+.image-grid .image img {
+    width: 80%;
+    margin-bottom: 2em;
+    border-radius: 5px;
+}
+
+.image-grid .image img:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#aerial1 {
+    grid-area: aerial1;
+}
+
+#scorpion {
+    grid-area: scorpion;
+}
+
+#acro {
+    grid-area: acro;
+}
+
+#duo2 {
+    grid-area: duo2;
+}
+
+#aerial2 {
+    grid-area: aerial2;
+}
+
+#cross {
+    grid-area: cross;
+}
+
+#triangle {
+    grid-area: triangle;
+}
+
+#front {
+    grid-area: front;
+}
+
+#aerial3 {
+    grid-area: aerial3;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 60px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content i {
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 8px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f1b0cf;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d197b3;
+}
+
+@media only screen and (max-width: 1130px){
+    #musicbox{
+       display: none;
+    }
+    .two-column-section>div{
+        /* clear: left; */
+        float: none;
+        width: 50%;
+        height: auto;
+        margin: auto;
+        box-sizing: unset;
+        /* text-align: center; */
+        
+    }
+
+}
+
+@media only screen and (max-width: 1023px){
+    nav.links{
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    nav.links{
+        display: none;
+    }
+
+    .navbar .hamburger{
+        display: block;
+    }
+    
+    #split, #lyra{
+        display: none;
+    }
+
+    .about-section>div,
+    .history-section>div,
+    .arts-section>div {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    .about-section p,
+    .history-section p,
+    .arts-section p {
+        font-size: 1.5rem;
+    }
+
+    .arts-section ul li a {
+        font-size: 1.5rem;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-areas:
+            "aerial1"
+            "scorpion"
+            "acro"
+            "duo2"
+            "aerial2"
+            "cross"
+            "triangle"
+            "front"
+            "aerial3";
+        grid-gap: 10px;
+        width: 100%;
+        margin: 2em;
+    }
+}
